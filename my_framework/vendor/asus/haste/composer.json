@@ -1,0 +1,15 @@
+{
+    "name": "asus/haste",
+    "autoload": {
+        "psr-4": {
+            "Asus\\Haste\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nargesss82",
+            "email": "nargesahangar82@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,26 @@
+{
+    "name": "asus/project8_mvc",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nargesss82",
+            "email": "nargesahangar82@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type":"path",
+            "url": "haste"
+        }
+    ],
+    "require": {
+        "asus/haste":"dev-main",
+        "rakit/validation": "^1.4",
+        "jenssegers/blade": "^1.4"
+    }
+}
+
