@@ -21,6 +21,18 @@ class ArticleController extends Controller
         $article->create(['title'=>'article two','body'=>'this is article two']);
         return 'article created';
     }
+    
+    public function editArticle(){
+        $article = new Article();
+        $article->edit(['title'=>'article three','body'=>'this is article three'],3);
+        return 'article edited';
+    }
+
+    public function deleteArticle(){
+        $article = new Article();
+        $article->delete(3);
+        return 'article deleted';
+    }
     public function create(Request $request)
     {
 
