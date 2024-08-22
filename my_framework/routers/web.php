@@ -12,6 +12,8 @@ Router::post('/article/createeee',[ArticleController::class,'store']);
 Router::get('/insert/article',[ArticleController::class,'createArticle']);
 Router::get('/edit/article',[ArticleController::class,'editArticle']);
 Router::get('/delete/article',[ArticleController::class,'deleteArticle']);
+Router::get('/get/articles',[ArticleController::class,'getArticles']);
+
 
 
 // Router::get('/about','about');

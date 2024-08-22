@@ -33,6 +33,12 @@ class ArticleController extends Controller
         $article->delete(3);
         return 'article deleted';
     }
+    public function getArticles()
+    {
+        $article = new Article();
+        $articles=$article->get();
+        var_dump($articles);
+    }
     public function create(Request $request)
     {
 
