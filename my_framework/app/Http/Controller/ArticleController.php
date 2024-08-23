@@ -18,7 +18,11 @@ class ArticleController extends Controller
     }
     public function createArticle(){
         $article = new Article();
-        $article->create(['title'=>'article two','body'=>'this is article two']);
+        $article->create(['title'=>'article 4','body'=>'this is article 4']);
+        $article->create(['title'=>'article 5','body'=>'this is article 5']);
+        $article->create(['title'=>'article 6','body'=>'this is article 6']);
+        $article->create(['title'=>'article 7','body'=>'this is article 7']);
+        $article->create(['title'=>'article 8','body'=>'this is article 8']);
         return 'article created';
     }
     
@@ -36,7 +40,12 @@ class ArticleController extends Controller
     public function getArticles()
     {
         $article = new Article();
-        $articles=$article->get();
+        // $articles=$article->get();
+        //$articles=$article->getFirst();
+        // $articles=$article->getFieldsForSelect()->get();
+        //$articles=$article->getFieldsForSelect('id','title')->limit(5)->get();
+        //$articles=$article->where('id',1)->where('title','article one')->getFirst();
+        $articles=$article->find(7);
         var_dump($articles);
     }
     public function create(Request $request)

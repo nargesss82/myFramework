@@ -6,6 +6,10 @@ class Model extends Database{
     protected string $table;
     protected PDOStatement $stmt;
     protected int $fetchMode=\PDO::FETCH_OBJ;
+    protected array $selectedFields=[];
+    protected int $limit=0;
+    protected array $whereList=[];
+    protected array $valuesForBind=[];
 
     public function __construct() {
         parent::__construct();
@@ -51,15 +55,68 @@ class Model extends Database{
         }
         public function select():self
         {
-            $this->stmt=$this->pdo->prepare("SELECT * FROM $this->table");
+            $query[]="SELECT";
+            if(count($this->selectedFields)>0){
+                $query[]=implode(",",$this->selectedFields);
+            }else{
+                $query[]="*";
+            }
+            $query[]=" FROM $this->table";
+            if(count($this->whereList)){
+                $query[]=$this->prepareWhere();
+            }
+            if($this->limit>0){
+                $query[]="LIMIT $this->limit";
+            }
+            //var_dump($query);die;
+            $this->stmt=$this->pdo->prepare(implode(" ",$query));
+            $this->bindValues();
             $this->stmt->execute();
+            return $this;
+        }
+        public function where(string $name,$value,string $operator="="):self
+        {
+            $this->whereList[]="$name $operator :$name";
+            $this->valuesForBind[$name]=$value;
+            return $this;
+        }
+        public function prepareWhere():string
+        {
+            //
+            $query[]="where";
+            foreach ($this->whereList as $key => $value) {
+                if($key !== array_key_first($this->whereList)){
+                    $query[]="AND";
+                }
+                $query[]=$value;
+            }
+            //var_dump(implode(" ",$query));die;
+            return implode(" ",$query);
+        }
+        public function find($value,$field='id')
+        {
+            return $this->where($field,$value)->getFirst();
+        }
+        public function getFieldsForSelect():self
+        {
+            
+            $this->selectedFields=func_get_args();
+            return $this;
+        }
+        public function limit(int $limit):self
+        {
+            $this->limit=$limit;
             return $this;
         }
 
 
         protected function bindValues(?array $data=null): void
         {
-            foreach($data as $key=>$value) {
+            if($data){
+                $this->valuesForBind=array_merge($this->valuesForBind,$data);
+
+            }
+            foreach($this->valuesForBind as $key=>$value) {
             $this->stmt->bindValue($key,$value);
             }
         }
