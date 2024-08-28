@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controller\ArticleController;
+use App\Http\Controller\Auth\LoginController;
 use Asus\Haste\Application;
 use Asus\Haste\Router;
 use Asus\Haste\Views;
@@ -13,8 +14,11 @@ Router::get('/insert/article',[ArticleController::class,'createArticle']);
 Router::get('/edit/article',[ArticleController::class,'editArticle']);
 Router::get('/delete/article',[ArticleController::class,'deleteArticle']);
 Router::get('/get/articles',[ArticleController::class,'getArticles']);
+
 Router::get('/auth/register',[RegisterController::class,'registerView']);
 Router::post('/auth/register',[RegisterController::class,'register']);
+Router::get('/auth/login',[LoginController::class,'loginView']);
+Router::post('/auth/login',[LoginController::class,'login']);
 
 
 // Router::get('/about','about');

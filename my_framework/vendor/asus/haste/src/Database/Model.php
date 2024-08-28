@@ -122,6 +122,12 @@ class Model extends Database{
             $this->stmt->bindValue($key,$value);
             }
         }
+
+    public function from(string $table):self
+    {
+        $this->table=$table;
+        return $this;
+        }
 }
 
 ?>

@@ -11,6 +11,7 @@ class Application{
     public Request $request;
     public Response $response;
     public Session $session;
+    public Views $views;
     public function __construct(string $root_dir) {
         self::$app = $this;
         self::$ROOT_DIR=$root_dir;
@@ -19,6 +20,7 @@ class Application{
         $this->request=new Request();
         $this->response=new Response();
         $this->session=new Session();
+        $this->views=new Views();
     }
 
    

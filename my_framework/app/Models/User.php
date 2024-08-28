@@ -1,5 +1,7 @@
 <?php namespace App\Models;
-      use Model;
+      use Asus\Haste\Database\Model;
+
+
 
 class User extends Model{
 

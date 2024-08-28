@@ -39,5 +39,11 @@ if(!function_exists('redirect')) {
         return response()->redirect($url);
     }
 }
+if(!function_exists('session')) {
+    function session():?\Asus\Haste\Session
+    {
+        return app()->session;
+    }
+}
 
 

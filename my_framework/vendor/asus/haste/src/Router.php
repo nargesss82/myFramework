@@ -84,7 +84,7 @@ class Router{
         }
 
         if(is_string($callback)){
-            return (new Views())->render($callback);
+            return (app()->views)->render($callback);
         }
 
 
