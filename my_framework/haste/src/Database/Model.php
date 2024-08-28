@@ -11,6 +11,7 @@ class Model extends Database{
     protected array $whereList=[];
     protected array $valuesForBind=[];
 
+
     public function __construct() {
         parent::__construct();
         }
@@ -21,6 +22,7 @@ class Model extends Database{
             $fields=implode(",",$key);//"title,body"
             $values=implode(",",array_map(fn($fields)=>":$fields",$key));//":title,:body"
             $this->stmt=$this->pdo->prepare("INSERT INTO $this->table($fields) VALUES ($values)");
+
 
             $this->bindValues($data);
             return $this->stmt->execute();

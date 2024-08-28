@@ -1,4 +1,5 @@
 <?php  namespace Asus\Haste;
+use App\Http\Controller\Auth\RegisterController;
 
 class Router{
 
@@ -91,13 +92,18 @@ class Router{
             $controllerMethod= new \ReflectionMethod($callback[0],$callback[1]);
 
 
+
             $aoutoInjection=[];
             foreach($controllerMethod->getParameters() as $key=>$value){
-                //var_dump($value->getType()->getName());die;
-            $class=$value->getName();
-            if(class_exists($class)){
-                $aoutoInjection[$value->getName()]=new $class;
-            }
+                if($value->getType()) {
+                    $class=$value->getType()->getName();
+                    //var_dump($value->getType()->getName());die;
+                    //$class = $value->getName();
+                    if (class_exists($class)) {
+                        $aoutoInjection[$value->getName()] = new $class;
+
+                    }
+                }
             
             }
             

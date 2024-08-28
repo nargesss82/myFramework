@@ -4,7 +4,7 @@ use App\Http\Controller\ArticleController;
 use Asus\Haste\Application;
 use Asus\Haste\Router;
 use Asus\Haste\Views;
-
+use App\Http\Controller\Auth\RegisterController;
 
 Router::get('/articles/{id:\d+}/edit/{article}',[ArticleController::class,'index']);
 Router::get('/article/create',[ArticleController::class,'create']);
@@ -13,7 +13,8 @@ Router::get('/insert/article',[ArticleController::class,'createArticle']);
 Router::get('/edit/article',[ArticleController::class,'editArticle']);
 Router::get('/delete/article',[ArticleController::class,'deleteArticle']);
 Router::get('/get/articles',[ArticleController::class,'getArticles']);
-
+Router::get('/auth/register',[RegisterController::class,'registerView']);
+Router::post('/auth/register',[RegisterController::class,'register']);
 
 
 // Router::get('/about','about');

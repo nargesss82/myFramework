@@ -29,6 +29,7 @@ class Request{
 
     public function all(): ?array
     {
+
         $data=[];
         if($this->isGet()){
             $data= filter_input_array(INPUT_GET,FILTER_SANITIZE_FULL_SPECIAL_CHARS);

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'asus/project8_mvc',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '4b959bac5c49fadf219edd867f89528c16fa5d58',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,16 +13,16 @@
         'asus/haste' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '427bfa568492f908c943f219015bcbc7c4ec7bfb',
+            'reference' => '7cc592144b5ae3d2c134088902ccbcb896ba171e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../asus/haste',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'asus/project8_mvc' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '4b959bac5c49fadf219edd867f89528c16fa5d58',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

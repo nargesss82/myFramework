@@ -7,14 +7,17 @@
             "dist": {
                 "type": "path",
                 "url": "haste",
-                "reference": "427bfa568492f908c943f219015bcbc7c4ec7bfb"
+                "reference": "7cc592144b5ae3d2c134088902ccbcb896ba171e"
             },
             "type": "library",
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Asus\\Haste\\": "src/"
-                }
+                },
+                "files": [
+                    "./src/helpers.php"
+                ]
             },
             "authors": [
                 {
