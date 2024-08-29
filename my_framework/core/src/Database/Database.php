@@ -9,7 +9,7 @@ class Database{
     public Migrations $migrations;
     public function __construct() {
         try{
-        $this->pdo=new PDO("mysql:host=localhost;dbname=mvc_project","root","91818212");
+        $this->pdo=new PDO("mysql:host=localhost;dbname=mvc_project","root","-------");
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);}catch(Exception $e){
             echo $e->getMessage();
         }
