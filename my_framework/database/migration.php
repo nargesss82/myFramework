@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "./../vendor/autoload.php";
-use Asus\Haste\Application;
+use Asus\Core\Application;
 
 $app=new Application(dirname(__DIR__));
 switch($argv[1] ?? false){

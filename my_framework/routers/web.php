@@ -2,9 +2,10 @@
 
 use App\Http\Controller\ArticleController;
 use App\Http\Controller\Auth\LoginController;
-use Asus\Haste\Application;
-use Asus\Haste\Router;
-use Asus\Haste\Views;
+use App\Http\Controller\PanelController;
+use Asus\Core\Application;
+use Asus\Core\Router;
+use Asus\Core\Views;
 use App\Http\Controller\Auth\RegisterController;
 
 Router::get('/articles/{id:\d+}/edit/{article}',[ArticleController::class,'index']);
@@ -19,6 +20,9 @@ Router::get('/auth/register',[RegisterController::class,'registerView']);
 Router::post('/auth/register',[RegisterController::class,'register']);
 Router::get('/auth/login',[LoginController::class,'loginView']);
 Router::post('/auth/login',[LoginController::class,'login']);
+Router::get('/user/panel', [PanelController::class,'index']);
+Router::get('/auth/logout', [LoginController::class,'logout']);
+
 
 
 // Router::get('/about','about');

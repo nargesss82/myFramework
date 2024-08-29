@@ -14,7 +14,7 @@ class ComposerStaticInit0095ac4aaea591f059d126fe568b52b3
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
-        'ced66b5e23c6e2bef0d9bb4e7bf0dc28' => __DIR__ . '/..' . '/asus/haste/src/helpers.php',
+        'fe4f046cb1cb31acd92393094a3b8c54' => __DIR__ . '/..' . '/asus/core/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -66,7 +66,7 @@ class ComposerStaticInit0095ac4aaea591f059d126fe568b52b3
         ),
         'A' => 
         array (
-            'Asus\\Haste\\' => 11,
+            'Asus\\Core\\' => 10,
             'App\\' => 4,
         ),
     );
@@ -162,9 +162,9 @@ class ComposerStaticInit0095ac4aaea591f059d126fe568b52b3
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
-        'Asus\\Haste\\' => 
+        'Asus\\Core\\' => 
         array (
-            0 => __DIR__ . '/..' . '/asus/haste/src',
+            0 => __DIR__ . '/..' . '/asus/core/src',
         ),
         'App\\' => 
         array (

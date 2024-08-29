@@ -1,19 +1,19 @@
 {
     "packages": [
         {
-            "name": "asus/haste",
+            "name": "asus/core",
             "version": "dev-main",
             "version_normalized": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "haste",
-                "reference": "7cc592144b5ae3d2c134088902ccbcb896ba171e"
+                "url": "core",
+                "reference": "4e19644826fbc5c2364308e99de1ff75fd04317b"
             },
             "type": "library",
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "Asus\\Haste\\": "src/"
+                    "Asus\\Core\\": "src/"
                 },
                 "files": [
                     "./src/helpers.php"
@@ -28,7 +28,7 @@
             "transport-options": {
                 "relative": true
             },
-            "install-path": "../asus/haste"
+            "install-path": "../asus/core"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad0e78698b15bb2b595f70ba03c41d14",
+    "content-hash": "6b467a32c70d27e35839f6d3db463ee3",
     "packages": [
         {
-            "name": "asus/haste",
+            "name": "asus/core",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "haste",
-                "reference": "7cc592144b5ae3d2c134088902ccbcb896ba171e"
+                "url": "core",
+                "reference": "4e19644826fbc5c2364308e99de1ff75fd04317b"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Asus\\Haste\\": "src/"
+                    "Asus\\Core\\": "src/"
                 },
                 "files": [
                     "./src/helpers.php"
@@ -1636,7 +1636,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "asus/haste": 20
+        "asus/core": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -2533,7 +2533,7 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      *
      * @return bool true if there is a test instance, otherwise false
      */
-    public static function hasTestNow();
+    public static function CorestNow();
 
     /**
      * Create a Carbon instance from a DateTime one.

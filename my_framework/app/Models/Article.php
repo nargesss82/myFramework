@@ -1,5 +1,5 @@
 <?php namespace App\Models;
-      use Asus\Haste\Database\Model;
+      use Asus\Core\Database\Model;
 
 class Article extends Model{
 

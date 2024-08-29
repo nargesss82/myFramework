@@ -14,11 +14,11 @@
     "repositories": [
         {
             "type":"path",
-            "url": "haste"
+            "url": "core"
         }
     ],
     "require": {
-        "asus/haste":"dev-main",
+        "asus/core":"dev-main",
         "rakit/validation": "^1.4",
         "jenssegers/blade": "^1.4"
     }

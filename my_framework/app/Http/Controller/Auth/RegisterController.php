@@ -3,8 +3,9 @@
 
 
 use App\Models\User;
-use Asus\Haste\Controller;
-use Asus\Haste\Request;
+use Asus\Core\Auth;
+use Asus\Core\Controller;
+use Asus\Core\Request;
 use Rakit\Validation\ErrorBag;
 use Rakit\Validation\Validation;
 use Rakit\Validation\Validator;
@@ -14,12 +15,18 @@ class RegisterController extends Controller
 
     public function registerView()
     {
+        if(Auth::check()){
+            return redirect('/user/panel');
+        }
         (session()->flash('old_inputs'));
         return $this->render('auth.register');
     }
 
     public function register()
     {
+        if(Auth::check()){
+            return redirect('/user/panel');
+        }
 
         $validation=$this->validate(request()->all(),[
             'name'=>'required|min:3|max:255',
@@ -39,6 +46,8 @@ class RegisterController extends Controller
         $userData=array_merge($userData,['password'=>$password_hash]);
 
         (new User())->create($userData);
+
+        return redirect('/auth/login');
 
 
     }

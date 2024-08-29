@@ -1,10 +1,10 @@
 <?php
 require __DIR__ . "./../vendor/autoload.php";
-use Asus\Haste\Application;
+use Asus\Core\Application;
 use App\Http\Controller\ArticleController;
-use Asus\Haste\H;
-use Asus\Haste\Request;
-use Asus\Haste\Router;
+use Asus\Core\H;
+use Asus\Core\Request;
+use Asus\Core\Router;
 
 
 // $app=new Application;

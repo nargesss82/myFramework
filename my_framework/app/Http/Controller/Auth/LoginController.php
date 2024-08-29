@@ -3,7 +3,8 @@
 namespace App\Http\Controller\Auth;
 
 use App\Models\User;
-use Asus\Haste\Controller;
+use Asus\Core\Auth;
+use Asus\Core\Controller;
 use Rakit\Validation\ErrorBag;
 
 class LoginController extends Controller
@@ -11,10 +12,16 @@ class LoginController extends Controller
 
     public function loginView()
     {
+        if(Auth::check()){
+            return redirect('/user/panel');
+        }
         return $this->render('auth.login');
     }
     public function login()
     {
+        if(Auth::check()){
+            return redirect('/user/panel');
+        }
         $validation=$this->validate(request()->all(),[
             'email'=>'required|email|max:255|exists:users,email',
             'password'=>'required|min:8'
@@ -30,6 +37,15 @@ class LoginController extends Controller
             $errors->add('password','check_password','Wrong password');
             redirect('/auth/login')->withErrors($errors);
         }
-        dd($user);
+
+        Auth::login($user);
+
+        redirect('/user/panel');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/auth/login');
     }
 }

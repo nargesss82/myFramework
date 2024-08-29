@@ -28,6 +28,6 @@ return array(
     'Doctrine\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Inflector'),
     'Carbon\\Doctrine\\' => array($vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
-    'Asus\\Haste\\' => array($vendorDir . '/asus/haste/src'),
+    'Asus\\Core\\' => array($vendorDir . '/asus/core/src'),
     'App\\' => array($baseDir . '/app'),
 );

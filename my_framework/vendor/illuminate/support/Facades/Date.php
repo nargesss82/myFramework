@@ -45,7 +45,7 @@ use Illuminate\Support\DateFactory;
  * @method static bool hasFormat($date, $format)
  * @method static bool hasMacro($name)
  * @method static bool hasRelativeKeywords($time)
- * @method static bool hasTestNow()
+ * @method static bool CorestNow()
  * @method static bool isImmutable()
  * @method static bool isModifiableUnit($unit)
  * @method static bool isStrictModeEnabled()

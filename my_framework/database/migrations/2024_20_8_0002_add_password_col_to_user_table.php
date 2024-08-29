@@ -1,6 +1,6 @@
 <?php
 
-use Asus\Haste\Application;
+use Asus\Core\Application;
 
 return new class{
 

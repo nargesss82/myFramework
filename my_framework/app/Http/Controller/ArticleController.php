@@ -2,8 +2,8 @@
 
 namespace App\Http\Controller;
 
-use Asus\Haste\Controller;
-use Asus\Haste\Request;
+use Asus\Core\Controller;
+use Asus\Core\Request;
 use Rakit\Validation\Validator;
  use App\Models\Article;
 

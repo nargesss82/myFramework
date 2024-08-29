@@ -13,5 +13,5 @@ return array(
     '72579e7bd17821bb1321b87411366eae' => $vendorDir . '/illuminate/support/helpers.php',
     '6e3fae29631ef280660b3cdad06f25a8' => $vendorDir . '/symfony/deprecation-contracts/function.php',
     'ef65a1626449d89d0811cf9befce46f0' => $vendorDir . '/illuminate/events/functions.php',
-    'ced66b5e23c6e2bef0d9bb4e7bf0dc28' => $vendorDir . '/asus/haste/src/helpers.php',
+    'fe4f046cb1cb31acd92393094a3b8c54' => $vendorDir . '/asus/core/src/helpers.php',
 );

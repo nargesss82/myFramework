@@ -71,9 +71,9 @@ trait Creator
         // instance then override as required
         $isNow = empty($time) || $time === 'now';
 
-        if (method_exists(static::class, 'hasTestNow') &&
+        if (method_exists(static::class, 'CorestNow') &&
             method_exists(static::class, 'getTestNow') &&
-            static::hasTestNow() &&
+            static::CorestNow() &&
             ($isNow || static::hasRelativeKeywords($time))
         ) {
             static::mockConstructorParameters($time, $tz);
@@ -337,7 +337,7 @@ trait Creator
 
     private static function createNowInstance($tz)
     {
-        if (!static::hasTestNow()) {
+        if (!static::CorestNow()) {
             return static::now($tz);
         }
 

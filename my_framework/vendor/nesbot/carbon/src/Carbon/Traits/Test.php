@@ -156,7 +156,7 @@ trait Test
      *
      * @return bool true if there is a test instance, otherwise false
      */
-    public static function hasTestNow()
+    public static function CorestNow()
     {
         return static::getTestNow() !== null;
     }
